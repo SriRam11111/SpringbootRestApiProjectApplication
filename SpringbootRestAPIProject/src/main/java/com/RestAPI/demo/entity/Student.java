@@ -7,21 +7,24 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-
 @Entity
-@Table(name="student")
+@Table(name = "student")
 public class Student {
+	
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int rollNo;
-	@Column(name="student_name")
+	@Column(name = "student_name")
 	private String name;
+	@Column(name="student_percentage")
 	private float percentage;
+	@Column(name="student_branch")
 	private String branch;
 	
 	public Student() {
-		
+		// TODO Auto-generated constructor stub
 	}
+	
 	
 	public Student(String name, float percentage, String branch) {
 		super();
@@ -29,6 +32,7 @@ public class Student {
 		this.percentage = percentage;
 		this.branch = branch;
 	}
+
 
 	public int getRollNo() {
 		return rollNo;
@@ -54,12 +58,12 @@ public class Student {
 	public void setBranch(String branch) {
 		this.branch = branch;
 	}
-	
 	@Override
 	public String toString() {
 		return "Student [rollNo=" + rollNo + ", name=" + name + ", percentage=" + percentage + ", branch=" + branch
 				+ "]";
 	}
-
 	
+	
+
 }
