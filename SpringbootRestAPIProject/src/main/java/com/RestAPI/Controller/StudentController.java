@@ -40,5 +40,6 @@ public class StudentController {
 	public void createStudent(@RequestBody Student student) {
 		repo.save(student); // can only send one by one not a list of students
 		
+		
 	}
 }
